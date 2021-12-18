@@ -15,15 +15,39 @@
   flex-wrap: wrap;
   padding: 0 4px;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -227,11 +251,12 @@
 
       <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
       <div class="row">
+        <div class="column">
       <div class="card">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
         <div class="container">
           <h4><b>Product 1</b></h4> 
-          <p>This product is trending on #1</p> 
+          <p>#1</p> 
         </div>
       </div>
 
@@ -239,7 +264,7 @@
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
         <div class="container">
           <h4><b>Product 2</b></h4> 
-          <p>This product is trending on #1</p> 
+          <p>#2</p> 
         </div>
       </div>
 
@@ -247,7 +272,7 @@
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
         <div class="container">
           <h4><b>Product 3</b></h4> 
-          <p>This product is trending on #1</p> 
+          <p> #3</p> 
         </div>
       </div>
 
@@ -255,10 +280,112 @@
         <img src="https://images-ext-2.discordapp.net/external/FQ3xPn6C9CVHNx0RYr5spW-hDGBee5aaaAzyW4oqQG8/%3Fu%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%2526pid%253DApi%26f%3D1/https/external-content.duckduckgo.com/iu/" alt="Avatar" style="width:100%">
         <div class="container">
           <h4><b>Product 4</b></h4> 
-          <p>This product is trending on #1</p> 
+          <p> #4</p> 
         </div>
       </div>
     </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 1</b></h4> 
+          <p>#1</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 2</b></h4> 
+          <p>#2</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 3</b></h4> 
+          <p> #3</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images-ext-2.discordapp.net/external/FQ3xPn6C9CVHNx0RYr5spW-hDGBee5aaaAzyW4oqQG8/%3Fu%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%2526pid%253DApi%26f%3D1/https/external-content.duckduckgo.com/iu/" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 4</b></h4> 
+          <p> #4</p> 
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 1</b></h4> 
+          <p>#1</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 2</b></h4> 
+          <p>#2</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 3</b></h4> 
+          <p> #3</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images-ext-2.discordapp.net/external/FQ3xPn6C9CVHNx0RYr5spW-hDGBee5aaaAzyW4oqQG8/%3Fu%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%2526pid%253DApi%26f%3D1/https/external-content.duckduckgo.com/iu/" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 4</b></h4> 
+          <p> #4</p> 
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 1</b></h4> 
+          <p>#1</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 2</b></h4> 
+          <p>#2</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 3</b></h4> 
+          <p> #3</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images-ext-2.discordapp.net/external/FQ3xPn6C9CVHNx0RYr5spW-hDGBee5aaaAzyW4oqQG8/%3Fu%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%2526pid%253DApi%26f%3D1/https/external-content.duckduckgo.com/iu/" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 4</b></h4> 
+          <p> #4</p> 
+        </div>
+      </div>
+    </div>
+    
+    
       </div>
 
       
