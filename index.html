@@ -10,6 +10,34 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
   <style>
+      .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 40%;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
     body,
     h1,
     h2,
@@ -217,138 +245,58 @@
 
     <!-- Container (Portfolio Section) -->
     <div class="w3-content w3-container w3-padding-64" id="portfolio">
-      <h3 class="w3-center">MY WORK</h3>
+      <h3 class="w3-center">OUR PRODUCTS</h3>
       <p class="w3-center">
         <em
-          >Here are some of my latest lorem work ipsum tipsum.<br />
+          >Here are some of our top products for you.<br />
           Click on the images to make them bigger</em
         >
       </p>
       <br />
 
       <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-      <div class="w3-row-padding w3-center">
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p1.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="The mist over the mountains"
-          />
-        </div>
-
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p2.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="Coffee beans"
-          />
-        </div>
-
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p3.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="Bear closeup"
-          />
-        </div>
-
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p4.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="Quiet ocean"
-          />
+      <div class="row">
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 1</b></h4> 
+          <p>This product is trending on #1</p> 
         </div>
       </div>
 
-      <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p5.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="The mist"
-          />
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 2</b></h4> 
+          <p>This product is trending on #1</p> 
         </div>
+      </div>
 
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p6.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="My beloved typewriter"
-          />
+      <div class="card">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.w3Vnk-n4zTxsI1MP3mLXZAHaLg%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 3</b></h4> 
+          <p>This product is trending on #1</p> 
         </div>
+      </div>
 
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p7.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="Empty ghost train"
-          />
+      <div class="card">
+        <img src="https://images-ext-2.discordapp.net/external/FQ3xPn6C9CVHNx0RYr5spW-hDGBee5aaaAzyW4oqQG8/%3Fu%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.Ad1tgHKm_nrfXOlwEi0pxgHaEo%2526pid%253DApi%26f%3D1/https/external-content.duckduckgo.com/iu/" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Product 4</b></h4> 
+          <p>This product is trending on #1</p> 
         </div>
+      </div>
+    </div>
+      </div>
 
-        <div class="w3-col m3">
-          <img
-            src="/w3images/p8.jpg"
-            style="width: 100%"
-            onclick="onClick(this)"
-            class="w3-hover-opacity"
-            alt="Sailing"
-          />
-        </div>
-        <button
-          class="w3-button w3-padding-large w3-light-grey"
-          style="margin-top: 64px"
-        >
-          LOAD MORE
-        </button>
+      
       </div>
     </div>
 
-    <!-- Modal for full size images on click-->
-    <div
-      id="modal01"
-      class="w3-modal w3-black"
-      onclick="this.style.display='none'"
-    >
-      <span
-        class="w3-button w3-large w3-black w3-display-topright"
-        title="Close Modal Image"
-        ><i class="fa fa-remove"></i
-      ></span>
-      <div
-        class="
-          w3-modal-content
-          w3-animate-zoom
-          w3-center
-          w3-transparent
-          w3-padding-64
-        "
-      >
-        <img id="img01" class="w3-image" />
-        <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-    </div>
+    
 
-    <!-- Third Parallax Image with Portfolio Text -->
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-      </div>
-    </div>
+    
 
     <!-- Container (Contact Section) -->
     <div class="w3-content w3-container w3-padding-64" id="contact">
